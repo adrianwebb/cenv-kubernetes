@@ -1,0 +1,8 @@
+profiles: .
+tasks: tasks
+lib: false
+modules:
+  kube:
+    provider: git
+    remote: https://github.com/venturiscm/cenv-kubernetes.git
+    reference: master
