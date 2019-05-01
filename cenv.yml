@@ -1,4 +1,7 @@
-profiles: .
+profiles:
+  - cenv
+  - kube
+  - .
 tasks: tasks
 lib: false
 modules:
