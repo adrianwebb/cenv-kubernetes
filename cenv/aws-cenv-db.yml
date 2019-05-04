@@ -1,0 +1,22 @@
+parents:
+  - module: percona
+    profile: aws-cluster
+
+  - aws-config
+
+provisioner:
+  cenv-db-user:
+    module: percona
+    task: database
+    "@cenv_database":
+      password: "@cenv_password"
+      privileges:
+        - "@cenv_database.*:ALL"
+      host: "%"
+
+  cenv-db:
+    module: percona
+    task: user
+    "@cenv_database":
+      collation: utf8_general_ci
+      encoding: utf8

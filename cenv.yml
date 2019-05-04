@@ -3,8 +3,14 @@ profiles:
   - kube
   - .
 tasks: tasks
+
 lib: false
 modules:
+  percona:
+    provider: git
+    remote: https://github.com/venturiscm/cenv-percona.git
+    reference: master
+
   kube:
     provider: git
     remote: https://github.com/venturiscm/cenv-kubernetes.git
