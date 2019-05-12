@@ -4,19 +4,16 @@ parents:
 
   - aws-config
 
-provisioner:
-  cenv-db-user:
+provision:
+  percona-cluster:
     module: percona
-    task: database
-    "@cenv_database":
-      password: "@cenv_password"
-      privileges:
-        - "@cenv_database.*:ALL"
-      host: "%"
-
-  cenv-db:
-    module: percona
-    task: user
-    "@cenv_database":
-      collation: utf8_general_ci
-      encoding: utf8
+    users_present:
+      "@cenv_database":
+        password: "@cenv_password"
+        privileges:
+          - "@cenv_database.*:ALL"
+        host: "%"
+    databases_present:
+      "@cenv_database":
+        collation: utf8_general_ci
+        encoding: utf8
