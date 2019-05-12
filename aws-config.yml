@@ -5,5 +5,5 @@ config:
   aws_networks:
     - aws-us-east-1
 
-  cenv_database: aabbccddeeffgghhii
-  cenv_password: aabbccddeeffgghhii
+  cenv_database: aabbccddeeffgg
+  cenv_password: aabbccddeeffgg
