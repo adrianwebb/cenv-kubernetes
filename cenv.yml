@@ -1,8 +1,8 @@
+tasks: tasks
 profiles:
   - cenv
   - kube
   - .
-tasks: tasks
 
 lib: false
 modules:
