@@ -1,5 +1,0 @@
-parents:
-  - module: cluster
-    profile: aws-domain
-
-  - aws-config
