@@ -1,15 +1,22 @@
 parents:
   - aws-cenv-db
-  # - module: cluster
-  #   profile: aws-cenv
+
+  - module: cluster
+    profile: aws-cenv
 
   - aws-config
 
-# provision:
-#   bootstrap-cenv:
-#     env:
-#       CENV_MYSQL_HOST: "&load_balancer(network=<network>):"
-#       CENV_MYSQL_PORT: ""
-#       CENV_MYSQL_DB: ""
-#       CENV_MYSQL_USER: ""
-#       CENV_MYSQL_PASSWORD: ""
+provision:
+  cenv-app-environment:
+    module: cluster
+    scopes:
+      network: "@aws_networks"
+    servers:
+      - subnet.network.name=<network>
+      - groups.name=cenv
+    env:
+      CENV_MYSQL_HOST: "&load_balancer(network=<network>):percona-db:variables[lb_dns_name]"
+      CENV_MYSQL_PORT: 3306
+      CENV_MYSQL_DB: "@cenv_database"
+      CENV_MYSQL_USER: "@cenv_database"
+      CENV_MYSQL_PASSWORD: "@cenv_password"
