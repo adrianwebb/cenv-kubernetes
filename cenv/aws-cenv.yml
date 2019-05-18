@@ -8,7 +8,6 @@ parents:
 
 provision:
   cenv-app-environment:
-    module: cluster
     scopes:
       network: "@aws_networks"
     servers:
@@ -20,3 +19,8 @@ provision:
       CENV_MYSQL_DB: "@cenv_database"
       CENV_MYSQL_USER: "@cenv_database"
       CENV_MYSQL_PASSWORD: "@cenv_password"
+
+  cenv-cluster:
+    requires:
+      - percona-cluster
+      - cenv-app-environment

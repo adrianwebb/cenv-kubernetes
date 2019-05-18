@@ -6,7 +6,6 @@ parents:
 
 provision:
   percona-cluster:
-    module: percona
     users_present:
       "@cenv_database":
         password: "@cenv_password"
