@@ -28,7 +28,7 @@ provision:
       - groups.name=cenv
     env:
       CENV_MYSQL_HOST: "&load_balancer(network=<network>):percona-db:variables[lb_dns_name]"
-      CENV_MYSQL_PORT: 3306
+      CENV_MYSQL_PORT: "@percona_port"
       CENV_MYSQL_DB: "@cenv_database"
       CENV_MYSQL_USER: "@cenv_database"
       CENV_MYSQL_PASSWORD: "@cenv_password"
