@@ -1,0 +1,39 @@
+parents:
+  - module: percona
+    profile: aws-cluster
+
+  - module: cluster
+    profile: aws-cenv-multi
+
+  - aws-config
+
+provision:
+  percona-cluster:
+    users_present:
+      "@cenv_database":
+        password: "@cenv_password"
+        privileges:
+          - "@cenv_database.*:ALL"
+        host: "%"
+    databases_present:
+      "@cenv_database":
+        collation: utf8_general_ci
+        encoding: utf8
+
+  cenv-app-environment:
+    scopes:
+      network: "@aws_networks"
+    servers:
+      - subnet.network.name=<network>
+      - groups.name=cenv
+    env:
+      CENV_MYSQL_HOST: "&load_balancer(network=<network>):percona-db:variables[lb_dns_name]"
+      CENV_MYSQL_PORT: "@percona_port"
+      CENV_MYSQL_DB: "@cenv_database"
+      CENV_MYSQL_USER: "@cenv_database_user"
+      CENV_MYSQL_PASSWORD: "@cenv_password"
+
+  cenv-cluster:
+    requires:
+      - percona-cluster
+      - cenv-app-environment
