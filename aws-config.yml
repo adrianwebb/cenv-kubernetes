@@ -4,9 +4,3 @@ config:
 
   aws_networks:
     - aws-us-east-1
-
-  percona_replicator_password: "%%percona_replicator_password:30"
-  percona_root_password: "%%percona_root_password:30"
-
-  cenv_database: "%%cenv_database:30"
-  cenv_password: "%%cenv_password:30"
