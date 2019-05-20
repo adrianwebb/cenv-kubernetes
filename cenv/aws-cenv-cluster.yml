@@ -7,7 +7,7 @@ parents:
 
   - aws-config
 
-provision:
+run:
   percona-cluster:
     users_present:
       "@cenv_database":
