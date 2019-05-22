@@ -5,5 +5,5 @@ parents:
   - aws-config
 
 config:
-  admin_server_name: bootstrap
+  admin_server_name: cenv-bootstrap
   admin_group: bootstrap
