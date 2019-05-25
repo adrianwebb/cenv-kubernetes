@@ -4,3 +4,5 @@ config:
 
   aws_networks:
     - aws-us-east-1
+
+  admin_host_name: admin
