@@ -7,4 +7,3 @@ parents:
 config:
   admin_server_name: cenv-bootstrap
   admin_group: bootstrap
-  admin_host_name: admin
