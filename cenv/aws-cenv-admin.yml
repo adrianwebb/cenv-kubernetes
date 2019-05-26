@@ -6,4 +6,4 @@ parents:
 
 config:
   admin_server_name: cenv-admin
-  admin_group: bootstrap
+  admin_group: admin
