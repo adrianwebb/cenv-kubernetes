@@ -3,7 +3,7 @@ parents:
     profile: aws-cluster
 
   - module: cluster
-    profile: aws-cenv-multi
+    profile: aws-cenv-cluster
 
   - aws-config
 
