@@ -2,10 +2,10 @@ parents:
   - aws-config
 
 profile:
-  cenv-bootstrap:
-    profile: aws-cenv-bootstrap
+  cenv-admin:
+    profile: aws-cenv-admin
 
   cenv-cluster:
-    requires: cenv-bootstrap
+    requires: cenv-admin
     host: "@admin_host_name"
     profile: aws-cenv-cluster
