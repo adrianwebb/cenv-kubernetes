@@ -1,9 +1,9 @@
 parents:
   - module: cluster
-    profile: aws-cenv-single
+    profile: aws-cenv-standalone
 
   - aws-config
 
 config:
-  admin_server_name: cenv-bootstrap
+  admin_server_name: cenv-admin
   admin_group: bootstrap
