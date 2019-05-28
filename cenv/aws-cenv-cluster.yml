@@ -11,13 +11,6 @@ config:
   percona_subnet_public_ip: true
   admin_subnet_public_ip: true
 
-server:
-  "@admin_server_name":
-    firewalls:
-      - internet
-      - ssh-internal
-      - admin-external
-
 run:
   percona-cluster:
     users_present:
