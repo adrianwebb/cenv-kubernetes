@@ -2,8 +2,8 @@ parents:
   - module: percona
     profile: aws-cluster
 
-  - module: cluster
-    profile: aws-cenv-cluster
+  # - module: cluster
+  #   profile: aws-cenv-cluster
 
   - aws-config
 
@@ -24,20 +24,20 @@ run:
         collation: utf8_general_ci
         encoding: utf8
 
-  cenv-app-environment:
-    scopes:
-      network: "@aws_networks"
-    servers:
-      - subnet.network.name=<network>
-      - groups.name=cenv
-    env:
-      CENV_MYSQL_HOST: "&load_balancer(network=<network>):percona-db:variables[lb_dns_name]"
-      CENV_MYSQL_PORT: "@percona_port"
-      CENV_MYSQL_DB: "@cenv_database"
-      CENV_MYSQL_USER: "@cenv_database_user"
-      CENV_MYSQL_PASSWORD: "@cenv_password"
+  # cenv-app-environment:
+  #   scopes:
+  #     network: "@aws_networks"
+  #   servers:
+  #     - subnet.network.name=<network>
+  #     - groups.name=cenv
+  #   env:
+  #     CENV_MYSQL_HOST: "&load_balancer(network=<network>):percona-db:variables[lb_dns_name]"
+  #     CENV_MYSQL_PORT: "@percona_port"
+  #     CENV_MYSQL_DB: "@cenv_database"
+  #     CENV_MYSQL_USER: "@cenv_database_user"
+  #     CENV_MYSQL_PASSWORD: "@cenv_password"
 
-  cenv-cluster:
-    requires:
-      - percona-cluster
-      - cenv-app-environment
+  # cenv-cluster:
+  #   requires:
+  #     - percona-cluster
+  #     - cenv-app-environment
