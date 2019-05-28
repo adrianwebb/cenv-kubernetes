@@ -8,8 +8,8 @@ parents:
   - aws-config
 
 config:
-  percona_subnet_public_ip: false
-  admin_subnet_public_ip: false
+  percona_subnet_public_ip: true
+  admin_subnet_public_ip: true
 
 server:
   "@admin_server_name":
