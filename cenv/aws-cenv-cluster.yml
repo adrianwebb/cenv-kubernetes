@@ -7,6 +7,10 @@ parents:
 
   - aws-config
 
+config:
+  admin_server_name: cenv
+  admin_group: cenv
+
 subnet:
   nat-a:
     keep: true
