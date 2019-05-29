@@ -32,7 +32,7 @@ firewall:
     keep: true
 
 server:
-  "@admin_server_name":
+  "@cenv_admin_server_name":
     keep: true
 
 run:

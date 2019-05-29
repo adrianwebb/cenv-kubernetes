@@ -5,5 +5,5 @@ parents:
   - aws-config
 
 config:
-  admin_server_name: cenv-admin
-  admin_group: admin
+  admin_server_name: "@cenv_admin_server_name"
+  admin_group: "@cenv_admin_group"
