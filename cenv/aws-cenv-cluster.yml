@@ -14,8 +14,6 @@ subnet:
     keep: true
   nat-c:
     keep: true
-  "@aws_admin_subnet":
-    keep: true
 
 firewall:
   all:
@@ -29,10 +27,6 @@ firewall:
   admin-external:
     keep: true
   admin-internal:
-    keep: true
-
-server:
-  "@cenv_admin_server_name":
     keep: true
 
 run:
