@@ -7,5 +7,20 @@ profile:
 
   cenv-cluster:
     requires: cenv-admin
+    operations: run
     host: "@admin_host_name"
     profile: aws-cenv-cluster
+
+  cenv-cluster-destroy:
+    requires: cenv-admin
+    operations: destroy
+    host: "@admin_host_name"
+    profile: aws-cenv-cluster
+    components:
+      - certificate
+      - subnet
+      - firewall
+      - storage
+      - mount
+      - load_balancer
+      - server
