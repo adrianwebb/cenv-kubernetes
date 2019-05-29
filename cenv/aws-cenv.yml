@@ -24,3 +24,9 @@ profile:
       - mount
       - load_balancer
       - server
+
+run:
+  cenv-host:
+    command: host save
+    host_fields:
+      host: "@{admin_server_name}-@environment.@root_domain"
