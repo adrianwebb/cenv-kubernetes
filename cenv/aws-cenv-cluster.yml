@@ -14,7 +14,7 @@ config:
 run:
   percona-cluster:
     users_present:
-      "@cenv_database":
+      "@cenv_database_user":
         password: "@cenv_password"
         privileges:
           - "@cenv_database.*:ALL"
