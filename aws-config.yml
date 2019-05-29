@@ -5,7 +5,6 @@ config:
   aws_networks:
     - aws-us-east-1
 
-  admin_server_name: cenv
   admin_host_name: admin
 
   cenv_database: "%%cenv_database:30"
