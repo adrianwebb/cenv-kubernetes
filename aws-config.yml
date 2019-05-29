@@ -6,3 +6,7 @@ config:
     - aws-us-east-1
 
   admin_host_name: admin
+
+  cenv_database: "%%cenv_database:30"
+  cenv_database_user: "%%cenv_database_user:30"
+  cenv_password: "%%cenv_password:30"
