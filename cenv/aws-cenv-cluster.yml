@@ -8,7 +8,7 @@ parents:
   - aws-config
 
 config:
-  percona_subnet_public_ip: true
+  percona_subnet_public_ip: false
   admin_subnet_public_ip: true
 
 run:
