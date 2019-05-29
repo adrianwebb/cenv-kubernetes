@@ -6,4 +6,5 @@ parents:
 
 config:
   aws_admin_subnet: admin-gateway
+  admin_server_name: cenv-admin
   admin_group: admin
