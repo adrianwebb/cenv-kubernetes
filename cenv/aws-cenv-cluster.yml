@@ -7,6 +7,34 @@ parents:
 
   - aws-config
 
+subnet:
+  nat-a:
+    keep: true
+  nat-b:
+    keep: true
+  nat-c:
+    keep: true
+  "@aws_admin_subnet":
+    keep: true
+
+firewall:
+  all:
+    keep: true
+  internet:
+    keep: true
+  ssh-external:
+    keep: true
+  ssh-internal:
+    keep: true
+  admin-external:
+    keep: true
+  admin-internal:
+    keep: true
+
+server:
+  "@admin_server_name":
+    keep: true
+
 run:
   percona-cluster:
     users_present:
