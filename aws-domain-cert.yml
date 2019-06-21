@@ -1,0 +1,6 @@
+parents:
+  - aws-domain
+
+domain:
+  "@root_domain":
+    certificate_authority: letsencrypt
