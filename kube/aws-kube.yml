@@ -1,5 +1,0 @@
-parents:
-  - module: kube
-    profile: aws-maintain
-
-  - aws-config

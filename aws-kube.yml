@@ -1,5 +1,8 @@
 parents:
-  - aws-domain
+  - module: kube
+    profile: aws-maintain
+
+  - config
 
 domain:
   "@root_domain":
