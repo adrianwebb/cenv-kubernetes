@@ -1,5 +1,5 @@
 parents:
-  - module: kube
-    profile: aws-client
+  - module: kubernetes
+    profile: aws/client
 
   - config
