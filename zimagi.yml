@@ -1,0 +1,9 @@
+name: personal-kubernetes
+
+lib: false
+tasks: tasks
+profiles: .
+
+modules:
+  - remote: https://github.com/dccs-tech/zimagi-kubernetes.git
+    reference: master
