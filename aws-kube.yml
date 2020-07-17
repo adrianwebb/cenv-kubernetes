@@ -3,7 +3,3 @@ parents:
     profile: aws/standalone
 
   - config
-
-domain:
-  "@root_domain":
-    certificate_authority: letsencrypt
