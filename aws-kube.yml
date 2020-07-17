@@ -1,6 +1,6 @@
 parents:
-  - module: kube
-    profile: aws-maintain
+  - module: kubernetes
+    profile: aws/standalone
 
   - config
 
